@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"; */
+html, body { height: 100%; margin-top: 0;}
+body {  font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+.html2{
+    margin-top: 0;
+}
+.btn-grad {
+    background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+    margin: 15px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: inline-flex;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+           
+  .btn-grad2 {
+    background-image: linear-gradient(to right, #780206 0%, #061161  51%, #780206  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: inline-flex;
+  }
+
+  .btn-grad2:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
+ 

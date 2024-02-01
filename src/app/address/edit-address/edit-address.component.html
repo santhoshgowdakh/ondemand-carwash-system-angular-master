@@ -1,0 +1,61 @@
+<h3 >Edit Address</h3>
+<form [formGroup]="editAddressForm" (ngSubmit)="updateAddress()"> 
+    <label class="form-label" >Address Name</label>
+    <div class="form-outline mb-4">
+       <select id="addressName" name="addressName" class="form-select" aria-label="Default select" formControlName="addressName" >
+      <option selected value="Home">Home</option>
+      <option value="Work">Work</option>
+      <option value="Other">Other</option>
+    </select>
+    <div *ngIf="!addressName?.valid && (addressName?.dirty || addressName?.touched)">
+       <div [hidden]="!addressName?.errors?.['required']" class="text-danger">
+             Address Name is required
+        </div>  
+    </div>
+</div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" >Street</label>
+        <input type="text"  class="form-control form-control-lg" formControlName="street"/>
+        <div *ngIf="!street?.valid && (street?.dirty || street?.touched)">
+            <div [hidden]="!street?.errors?.['required']" class="text-danger">
+                  Street is required
+             </div>  
+         </div>
+      </div>
+
+      <div class="form-outline mb-4">
+          <label class="form-label" >City</label>
+        <input type="text"  class="form-control form-control-lg" formControlName="city"/>
+        <div *ngIf="!city?.valid && (city?.dirty || city?.touched)">
+            <div [hidden]="!city?.errors?.['required']" class="text-danger">
+                  City is required
+             </div>  
+         </div>
+        </div>
+    
+
+    <div class="form-outline mb-4">
+        <label class="form-label" >State</label>
+      <input type="text" class="form-control form-control-lg" formControlName="state"/>
+      <div *ngIf="!state?.valid && (state?.dirty || state?.touched)">
+        <div [hidden]="!state?.errors?.['required']" class="text-danger">
+              State is required
+         </div>  
+     </div>
+    </div>
+    <div class="form-outline mb-4">
+        <label class="form-label" >Pincode</label>
+      <input type="number" class="form-control form-control-lg" formControlName="pincode"/>
+      <div *ngIf="!pincode?.valid && (pincode?.dirty || pincode?.touched)">
+        <div [hidden]="!pincode?.errors?.['required']" class="text-danger">
+              pincode is required
+         </div>  
+     </div>
+    </div>
+
+   <div class="d-flex justify-content-center">
+      <button type="submit"
+        class="btn btn-primary btn-block btn-lg gradient-custom-4" [disabled]="!editAddressForm.valid">Save Address</button>
+    </div>
+  </form>

@@ -1,0 +1,84 @@
+<!-- <div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Sign In</h3>
+				<div class="d-flex justify-content-center btn-grad2">
+					<span><i class="fab fa-facebook-square btn-grad"></i></span>
+					<span><i class="fab fa-google-plus-square btn-grad"></i></span>
+					<span><i class="fab fa-twitter-square btn-grad"></i></span>
+				</div>
+			</div>
+			<div class="card-body">
+				<form [formGroup]="loginForm" (ngSubmit)="login()">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" formControlName="userName" placeholder="username">
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" formControlName="password" class="form-control" placeholder="password">
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox">Remember Me
+					</div>
+					<div class="form-group">
+						<input type="submit" value="LogIn" class="float-right btn-grad2">
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center links">
+					Don't have an account?<a href="#">Sign Up</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a href="#">Forgot your password?</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<div class="modal modal-signin position-static d-block bg-secondary py-1" tabindex="-1" role="dialog" id="modalSignin">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content rounded-4 shadow">
+		<div class="modal-header p-3 pb-4 border-bottom-0">
+		  <h2 class="fw-bold mb-0">Log In</h2>
+		  <button type="button" class="btn-close" (click)="close()" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		
+		<div class="modal-body p-5 pt-0">
+		  <form [formGroup]="loginForm" (ngSubmit)="login()">
+			<p class="text-red" *ngIf="this.responseMessage!=null">{{this.responseMessage.message}}</p>
+			<div class="form-floating mb-3">
+			  <input type="email" class="form-control rounded-3" id="username" formControlName="userName">
+			  <label for="username">Username</label>
+			</div>
+			<div class="form-floating mb-3">
+			  <input type="password" class="form-control rounded-3" id="floatingPassword" formControlName="password">
+			  <label for="floatingPassword">Password</label>
+			</div>
+		  
+			<button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" >Log In</button>
+			<small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+			<p>Don't have account? .. <a href="create_user" >create one</a></p>
+			<!-- <hr class="my-4">
+			<h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+			<button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="submit">
+			  <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"></use></svg>
+			  Sign up with Twitter
+			</button>
+			<button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+			  <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
+			  Sign up with Facebook
+			</button> -->
+		</form>
+		</div>
+	  </div>
+	</div>
+  </div>

@@ -1,0 +1,30 @@
+/* .example-card {
+    max-width: 400px;
+}
+
+.example-header-image {
+    /* background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); */
+    /* background-size: cover; */
+.gradient-custom {
+ 
+    background: #1E90FF;
+    
+    background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgb(48, 155, 218));
+    
+    background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
+    }
+
+.card {
+    box-shadow: 10px 10px 5px lightblue;
+}
+
+.text-casual {
+    text-align: center;
+}
+
+img.card-header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

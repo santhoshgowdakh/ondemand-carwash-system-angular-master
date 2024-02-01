@@ -1,0 +1,172 @@
+<h5>Edit User</h5>
+<form class="flex-container" #f="ngForm">
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" placeholder="First Name" [(ngModel)]="data.firstName" required name="fname"
+                #fname="ngModel">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="fname.errors && (fname.dirty || fname.touched)">
+            <p *ngIf="fname.errors?.['required']">First Name is required</p>
+        </div>
+    </div>
+
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" placeholder="Last Name" [(ngModel)]="data.lastName" required name="lname"
+                #lname="ngModel">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="lname.errors && (lname.dirty || lname.touched)">
+            <p *ngIf="lname.errors?.['required']">Last Name is required</p>
+        </div>
+    </div>
+
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <mat-label>Mobile No</mat-label>
+            <input matInput type="text" placeholder="Mobile No" [(ngModel)]="data.mobileNumber" required name="mobileno"
+                #mobileno="ngModel" maxlength="10">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="mobileno.errors && (mobileno.dirty || mobileno.touched)">
+            <p *ngIf="mobileno.errors?.['required']">Mobile No is required</p>
+            <p *ngIf="mobileno.errors?.['maxlength']">10 digit mobile no required</p>
+        </div>
+
+    </div>
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <mat-label>Email</mat-label>
+            <input matInput type="text" placeholder="Email" [(ngModel)]="data.email" required name="email"
+                #email="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="email.errors && (email.dirty || email.touched)">
+            <p *ngIf="email.errors?.['required']">Email is required</p>
+            <p *ngIf="email.errors?.['pattern']">Please enter valid email id</p>
+        </div>
+
+    </div>
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <mat-label>Age</mat-label>
+            <input matInput type="number" placeholder="Age" [(ngModel)]="data.age" required name="age" #age="ngModel"
+                pattern="^(1?[1-9]|[1-9][0-9]|[1][1-9][1-9]|200)$">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="age.errors && (age.dirty || age.touched)">
+            <p *ngIf="age.errors?.['required']">Age is required</p>
+            <p *ngIf="age.errors?.['pattern']">Age should be greater than 0</p>
+        </div>
+
+    </div>
+
+
+    <!-- <mat-form-field class="example-form-field" >
+        <mat-label>Address Id</mat-label>
+        <input matInput type="number" placeholder="Address Id" [(ngModel)]="data.addressId" disabled required
+            name="addressid">
+    </mat-form-field> -->
+    <!-- <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <mat-label>Street</mat-label>
+            <input matInput type="text" placeholder="Street" [(ngModel)]="data.addressDto.street" required name="street"
+                #street="ngModel">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="street.errors && (street.dirty || street.touched)">
+            <p *ngIf="street.errors?.['required']">Street is required</p>
+        </div>
+
+    </div>
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <mat-label>City</mat-label>
+            <input matInput type="text" placeholder="City" [(ngModel)]="data.addressDto.city" required name="city"
+                #city="ngModel">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="city.errors && (city.dirty || city.touched)">
+            <p *ngIf="city.errors?.['required']">City is required</p>
+        </div>
+
+    </div>
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <mat-label>Pincode</mat-label>
+            <input matInput type="number" placeholder="Pincode" [(ngModel)]="data.addressDto.pincode" required
+                name="pincode" #pincode="ngModel">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="pincode.errors && (pincode.dirty || pincode.touched)">
+            <p *ngIf="pincode.errors?.['required']">Pincode is required</p>
+        </div>
+
+    </div>
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <mat-label>State</mat-label>
+            <input matInput type="text" placeholder="State" [(ngModel)]="data.addressDto.state" required name="state"
+                #state="ngModel">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="state.errors && (state.dirty || state.touched)">
+            <p *ngIf="state.errors?.['required']">State is required</p>
+        </div>
+
+
+    </div> -->
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <mat-label>User Name</mat-label>
+            <input matInput type="text" placeholder="Username" [(ngModel)]="data.userName" required name="username"
+                #username="ngModel">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="username.errors && (username.dirty || username.touched)">
+            <p *ngIf="username.errors?.['required']">Username is required</p>
+        </div>
+
+    </div>
+
+
+    <!-- <mat-form-field class="example-form-field" >
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Password" [(ngModel)]="data.password" required name="password"
+            #password="ngModel">
+    </mat-form-field>
+    <div class="text-danger" *ngIf="password.errors && (password.dirty || password.touched)">
+        <p *ngIf="password.errors?.['required']">Password is required</p>
+    </div> -->
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <mat-label>User Id</mat-label>
+            <input matInput type="number" placeholder="UserId" [(ngModel)]="data.userId" disabled required name="userid"
+                #userid="ngModel">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="userid.errors && (userid.dirty || userid.touched)">
+            <p *ngIf="userid.errors?.['required']">User Id is required</p>
+        </div>
+
+    </div>
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <mat-label>User Role</mat-label>
+            <input matInput type="text" placeholder="User Role" [(ngModel)]="data.userRole" required name="userrole"
+                #userrole="ngModel">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="userrole.errors && (userrole.dirty || userrole.touched)">
+            <p *ngIf="userrole.errors?.['required']">User Role is required</p>
+        </div>
+
+    </div>
+
+
+</form>
+
+<div>
+    <button mat-raised-button color="primary" (click)="onSaveEditedData()">Submit</button>
+</div>

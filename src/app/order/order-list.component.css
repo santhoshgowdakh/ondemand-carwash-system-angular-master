@@ -1,0 +1,5 @@
+.shift:hover, .active{
+    transform: scale(1.1);
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+    cursor: pointer;
+  }

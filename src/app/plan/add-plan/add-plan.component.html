@@ -1,0 +1,64 @@
+<h3 >Add New Plan</h3>
+<form [formGroup]="addPlanForm" (ngSubmit)="addPlan()"> 
+    <div class="form-outline mb-4">
+        <label class="form-label" >Plan ID</label>
+        <input type="number"  class="form-control form-control-lg" formControlName="planId"/>
+        <div *ngIf="!planId?.valid && (planId?.dirty || planId?.touched)">
+            <div [hidden]="!planId?.errors?.['required']" class="text-danger">
+                  Plan ID is required
+             </div>  
+         </div>
+      </div>
+    <label class="form-label" >Plan Name</label>
+    <div class="form-outline mb-4">
+       <select id="carType" name="carType" class="form-select" aria-label="Default select" formControlName="planName" >
+      <option selected value="basic">Basic</option>
+      <option value="standard">Standard</option>
+      <option value="premium">Premium</option>
+    </select>
+    <div *ngIf="!planName?.valid && (planName?.dirty || planName?.touched)">
+       <div [hidden]="!planName?.errors?.['required']" class="text-danger">
+             Plan Name is required
+        </div>  
+    </div>
+</div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" >Plan Description</label>
+        <input type="text"  class="form-control form-control-lg" formControlName="planDescription"/>
+        <div *ngIf="!planDescription?.valid && (planDescription?.dirty || planDescription?.touched)">
+            <div [hidden]="!planDescription?.errors?.['required']" class="text-danger">
+                  Plan Description is required
+             </div>  
+         </div>
+      </div>
+
+      <div class="form-outline mb-4">
+          <label class="form-label" >Price</label>
+        <input type="number"  class="form-control form-control-lg" formControlName="price"/>
+        <div *ngIf="!price?.valid && (price?.dirty || price?.touched)">
+            <div [hidden]="!price?.errors?.['required']" class="text-danger">
+                  Price is required
+             </div>  
+         </div>
+        </div> 
+     
+        <div class="form-outline mb-4">
+            <label class="form-label" >Car Type</label>
+           <select id="planName" name="planName" class="form-select" aria-label="Default select" formControlName="carType" >
+          <option selected value="seden">Seden</option>
+          <option value="SUV">SUV</option>
+          <option value="off-road">Off Road</option>
+        </select>
+        <div *ngIf="!carType?.valid && (carType?.dirty || carType?.touched)">
+           <div [hidden]="!carType?.errors?.['required']" class="text-danger">
+                 Car Type is required
+            </div>  
+        </div>
+    </div>
+
+   <div class="d-flex justify-content-center">
+      <button type="submit"
+        class="btn btn-primary btn-block btn-lg gradient-custom-4" [disabled]="!addPlanForm.valid">Add Plan</button>
+    </div>
+  </form>

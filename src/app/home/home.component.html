@@ -1,0 +1,33 @@
+<nav class="fixed-top">
+    <div class="container-fluid align-items-center navbar ">
+
+        <div><a class="navbar-brand align-items-center link-light ps-5 justify-content-lg-start glow">ＳＨＩＮＥＴＡＳＴＩＣ</a>
+        </div>
+
+        <ul class="mb-0 mt-1 " id="selected">
+            <!-- px-5 fs-6 -->
+            <li class="list shift"><a routerLink="/home" class="nav-link px-4 fs-6 " routerLinkActive="active">Home</a></li>
+            <li class="list shift" *ngIf="this.authenticationResponse!=null&&this.authenticationResponse.userRole=='aa'"><a routerLink="/leader-board" class="nav-link px-4  fs-6  " routerLinkActive="active">Leaderboard</a></li>
+            <li class="list shift"><a routerLink="/plan-list" class="nav-link px-4 fs-6 " routerLinkActive="active">Plans</a></li>
+            <li class="list shift" *ngIf="this.authenticationResponse!=null&&this.authenticationResponse.userRole=='admin'"><a routerLink="/promocode" class="nav-link px-4 fs-6 " routerLinkActive="active">Promocode</a></li>
+            <li class="list shift" *ngIf="this.authenticationResponse!=null"><a routerLink="/order" class="nav-link px-4 fs-6 " routerLinkActive="active">Orders</a></li>
+            <li class="list shift"><a *ngIf="this.authenticationResponse!=null&&this.authenticationResponse.userRole=='admin'" routerLink="/car" class="nav-link px-4 fs-6 " routerLinkActive="active">Cars</a></li>
+            <li class="list shift" *ngIf="this.authenticationResponse!=null&&this.authenticationResponse.userRole=='admin'"><a routerLink="/user" class="nav-link px-4 fs-6 " routerLinkActive="active" >Users</a></li>
+            <li class="list shift"><a routerLink="/aboutus" class="nav-link px-4 fs-6 " routerLinkActive="active">About Us</a></li>
+            <li class="list px-3 profile" data-bs-toggle="dropdown" *ngIf="this.authenticationResponse!=null" aria-expanded="true" >
+               <img src="../../assets/profile_image.png" alt="0" width="32" height="32" class="rounded-circle" >
+            <ul class="dropdown-menu text-small flex-column" >
+                <li *ngIf="this.authenticationResponse.userRole=='customer'"><a class="dropdown-item" routerLink="/mycars" routerLinkActive="active2">My Cars</a></li>
+                <li><a class="dropdown-item" routerLink="/address" routerLinkActive="active2">My Address</a></li>
+                <!-- <li><a class="dropdown-item" routerLink="/payments" routerLinkActive="active2">My payments</a></li> -->
+                <li><a class="dropdown-item" routerLink="/profile" routerLinkActive="active2">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" (click)="signOut()">Sign out</a></li>
+            </ul>
+        </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid outlet">
+    <router-outlet></router-outlet>
+</div>

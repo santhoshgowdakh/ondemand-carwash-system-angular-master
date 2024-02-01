@@ -1,0 +1,44 @@
+.navbar {
+  background-color: rgb(5, 61, 246);
+  /* background-color: black; */
+  box-shadow: 0 0 10px 5px;
+  margin-top: 0px;
+  position: absolute;
+}
+
+.list {
+  display: inline-block;
+  color: white;
+}
+
+.dropdown-menu {
+  top: 80%;
+  left: 84%
+}
+
+.shift:hover,
+.active {
+  transform: scale(1.2);
+  text-shadow: 2px 2px 5px black;
+  /* text-shadow: 2px 2px 5px white; */
+}
+
+.glow {
+  transform: scale(1.3);
+  text-shadow: 2px 2px 4px black;
+}
+
+.profile {
+  cursor: pointer;
+
+}
+
+.active2 {
+  background-color: rgb(5, 61, 246);
+  color: white;
+}
+
+.outlet {
+  margin-top: 46px;
+  --bs-gutter-x: 0rem;
+}

@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+}
+
+.example-button-row {
+    display: table-cell;
+    width: 490px;
+}
+
+.add_car {
+    float: right;
+    margin: 5px;
+}

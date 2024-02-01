@@ -1,0 +1,78 @@
+<!-- <div class="card">
+    <mat-card-header>
+        <div class="col-md-8">
+            <div class="card-body p-4">
+                <div><img mat-card-image src="../../assets/profile_image.png" alt="Profile picture"></div>
+    </mat-card-header>
+    <div class="row pt-1">
+        <div class="col-6 mb-3">
+            <h6 class="mt-4">Car Id: {{data.carId}}</h6>
+        </div>
+        <div class="col-6 mb-3">
+            <h6>User Id: {{user.firstName}}</h6>
+        </div>
+        <div class="col-6 mb-3">
+            <h6>User Id: {{user.firstName}}</h6>
+        </div>
+        <div class="col-6 mb-3">
+            <h6>Last name: {{user.lastName}}</h6>
+        </div>
+        <div class="col-6 mb-3">
+            <h6>Email: {{user.age}}</h6>
+        </div>
+        <div class="col-6 mb-3">
+            <h6>Contact No: {{user.age}}</h6>
+        </div>
+        <div class="col-6 mb-3">
+            <h6>Role: {{user.age}}</h6>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div>
+    <button type="button" class="btn-light btn-primary">
+        <a [routerLink]="['/updateuserdetails',user.userId]">Update</a></button>
+    <button type="button" class="btn-light btn-primary" (click)="onDelete()">Delete</button>
+
+</div>
+
+</div> -->
+
+<div class="container">
+    <h2>User Profile</h2>
+    <div class="card">
+        <div class="card-header"><img mat-card-image src="../../assets/profile_image.png" alt="Profile picture"></div>
+        <div class="card-body">
+            <!-- <div class="text-casual">
+                <h6 class="mt-4">Car Id: {{data.carId}}</h6>
+            </div> -->
+            <div class="text-casual">
+                <h6>User Id: {{user.firstName}}</h6>
+            </div>
+            <div class="text-casual">
+                <h6>User Id: {{user.firstName}}</h6>
+            </div>
+            <div class="text-casual">
+                <h6>Last name: {{user.lastName}}</h6>
+            </div>
+            <div class="text-casual">
+                <h6>Email: {{user.age}}</h6>
+            </div>
+            <div class="text-casual">
+                <h6>Contact No: {{user.age}}</h6>
+            </div>
+            <div class="text-casual ">
+                <h6>Role: {{user.age}}</h6>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn-light btn-primary">
+                <a [routerLink]="['/updateuserdetails',user.userId]">Edit</a></button>
+            <button type="button" class="btn-light btn-primary" (click)="onDelete()">Delete</button>
+            <button type="button" class="btn-light btn-primary" (click)="onBack()">Back</button>
+
+        </div>
+    </div>
+</div>

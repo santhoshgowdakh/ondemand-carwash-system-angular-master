@@ -1,0 +1,44 @@
+<table class="table" >
+
+    <thead>
+        <tr>
+            <th>Order Id</th>
+            <th>CustomerId</th>
+            <th>CarId</th>
+            <th>WasherId</th>
+            <th>Plan Id</th>
+            <th>promocode</th>
+            <th>totalPrice</th>
+            <th>orderStatus</th>
+            <th>beforeWashPic</th>
+            <th>afterWashPic</th>
+            <th>placedOn</th>
+            <!-- <th>scheduledOn</th>
+            <th>closedOn</th> -->
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let o of orders">
+            <td><a [routerLink]="['/order',o.orderId]" >{{o.orderId}}</a></td>
+            <td>{{o.customerId}}</td>
+            <td>{{o.carId}}</td>
+            <td>{{o.washerId}}</td>
+            <td>{{o.planId}}</td>
+            <td>{{o.promocode}}</td>
+            <td>{{o.totalPrice}}</td>
+            <td>{{o.orderStatus}}</td>
+            <td>{{o.beforeWashPic}}</td>
+            <td>{{o.afterWashPic}}</td>
+            <td>{{o.placedOn}}</td>
+            <!-- <td>{{o.scheduledOn}}</td>
+            <td>{{o.closedOn}}</td> -->
+            <td *ngIf="o.orderStatus=='open'"> <button class="btn btn-info" (click)="acceptOrder(o)">Accept</button></td>
+        </tr>
+    </tbody>
+</table>
+
+  
+
+
+        

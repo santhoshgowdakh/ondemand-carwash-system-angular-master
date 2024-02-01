@@ -1,0 +1,48 @@
+<!-- <div class="card">
+    <img src="CarImage.png" alt="car image" style="width:100%">
+    <h1>Car Details</h1>
+    <h6>{{data.carId}}</h6>
+    <h6>{{data.userId}}</h6>
+    <h6>{{data.carRegisterationNumber}}</h6>
+    <h6>{{data.carLocation}}</h6>
+    <h6>{{data.carBrand}}</h6>
+    <h6>{{data.carColor}}</h6>
+    <p><button (click)="onBack()">Back</button></p>
+
+</div> -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+            <div class="card">
+                <img class="card-img" src="assets\images\CarImage.png" alt="CarImage">
+                
+                <div class="card-body">
+                    <h4 class="card-title">Car Details : </h4>
+
+                    <div class="buy d-flex justify-content-between align-items-center">
+
+                        <div class="price text-success">
+                            <h6 class="mt-4">Car Id: {{data.carId}}</h6>
+                        </div>
+                        <div class="price text-success">
+                            <h6 class="mt-4">User Id: {{data.userId}}</h6>
+                        </div>
+                        <div class="price text-success">
+                            <h6 class="mt-4">Registeration Number: {{data.carRegistrationNumber}}</h6>
+                        </div>
+                        <!-- <div class="price text-success">
+                            <h6 class="mt-4">Location: {{data.carLocation}}</h6>
+                        </div> -->
+                        <div class="price text-success">
+                            <h6 class="mt-4">Brand: {{data.carBrand}}</h6>
+                        </div>
+                        <div class="price text-success">
+                            <h6 class="mt-4">Color: {{data.carColor}}</h6>
+                        </div>
+                        <button class="btn btn-danger mt-3" (click)="onBack()">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

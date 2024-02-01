@@ -1,0 +1,38 @@
+<h3 >Add New Promocode</h3>
+<form [formGroup]="addPromocodeForm" (ngSubmit)="addPromocode()"> 
+    <div class="form-outline mb-4">
+        <label class="form-label" >Promocode</label>
+        <input type="text"  class="form-control form-control-lg" formControlName="promocode"/>
+        <div *ngIf="!promocode?.valid && (promocode?.dirty || promocode?.touched)">
+            <div [hidden]="!promocode?.errors?.['required']" class="text-danger">
+                  Promocode is required
+             </div>  
+         </div>
+      </div>
+    
+
+    <div class="form-outline mb-4">
+        <label class="form-label" >Promocode Description</label>
+        <input type="text"  class="form-control form-control-lg" formControlName="promocodeDescription"/>
+        <div *ngIf="!promocodeDescription?.valid && (promocodeDescription?.dirty || promocodeDescription?.touched)">
+            <div [hidden]="!promocodeDescription?.errors?.['required']" class="text-danger">
+                  Promocode Description is required
+             </div>  
+         </div>
+      </div>
+
+      <div class="form-outline mb-4">
+          <label class="form-label" >Discount</label>
+        <input type="number"  class="form-control form-control-lg" formControlName="discount"/>
+        <div *ngIf="!discount?.valid && (discount?.dirty || discount?.touched)">
+            <div [hidden]="!discount?.errors?.['required']" class="text-danger">
+                  discount is required
+             </div>  
+         </div>
+        </div> 
+
+   <div class="d-flex justify-content-center">
+      <button type="submit"
+        class="btn btn-primary btn-block btn-lg gradient-custom-4" [disabled]="!addPromocodeForm.valid">Add Promocode</button>
+    </div>
+  </form>

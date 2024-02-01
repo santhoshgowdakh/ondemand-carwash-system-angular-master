@@ -1,0 +1,123 @@
+<h5>Add Car</h5>
+<form class="flex-container" #f="ngForm" novalidate autocomplete="off">
+    <!-- 
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="number" placeholder="Car Id" [(ngModel)]="model.carId" required #fname="ngModel"
+                name="carname">
+        </mat-form-field>
+
+    </div> -->
+
+    <!-- <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="number" placeholder="User Id" [(ngModel)]="model.userId" required #fname="ngModel"
+                name="uername">
+        </mat-form-field>
+
+    </div> -->
+
+    <!-- <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="number" placeholder="Address Id" [(ngModel)]="model.addressId" required
+                #fname="ngModel" name="address">
+        </mat-form-field>
+
+    </div> -->
+
+    <!-- <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="String" placeholder="Image" [(ngModel)]="model.carImage" required #fname="ngModel"
+                name="image">
+        </mat-form-field>
+
+    </div> -->
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="text" placeholder="Registeration Number" [(ngModel)]="model.carRegisterationNumber"
+                required #fname="ngModel" name="registration">
+        </mat-form-field>
+
+    </div>
+    <!-- <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="String" placeholder="Car Location" [(ngModel)]="model.carLocation" required
+                #fname="ngModel" name="location">
+        </mat-form-field>
+
+    </div> -->
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="text" placeholder="Car Color" [(ngModel)]="model.carColor" required #fname="ngModel"
+                name="color">
+        </mat-form-field>
+
+    </div>
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="text" placeholder="Car Brand" [(ngModel)]="model.carBrand" required #fname="ngModel"
+                name="brand">
+        </mat-form-field>
+
+    </div>
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="text" placeholder="Car Model" [(ngModel)]="model.carModel" required #fname="ngModel"
+                name="model">
+        </mat-form-field>
+
+    </div>
+    <!-- 
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="text" placeholder="Street" [(ngModel)]="model.addressDto.street" required
+                name="street" #street="ngModel">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="street.errors && (street.dirty || street.touched)">
+            <p *ngIf="street.errors?.['required']">Street is required</p>
+        </div>
+    </div>
+
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="text" placeholder="City" [(ngModel)]="model.addressDto.city" required name="city"
+                #city="ngModel">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="city.errors && (city.dirty || city.touched)">
+            <p *ngIf="city.errors?.['required']">City is required</p>
+        </div>
+    </div>
+
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="number" placeholder="Pincode" [(ngModel)]="model.addressDto.pincode" required
+                name="pincode" #pincode="ngModel">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="pincode.errors && (pincode.dirty || pincode.touched)">
+            <p *ngIf="pincode.errors?.['required']">Pincode is required</p>
+        </div>
+
+    </div>
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="text" placeholder="State" [(ngModel)]="model.addressDto.state" required name="state"
+                #state="ngModel">
+        </mat-form-field>
+        <div class="text-danger" *ngIf="state.errors && (state.dirty || state.touched)">
+            <p *ngIf="state.errors?.['required']">State is required</p>
+        </div>
+
+
+    </div> -->
+
+</form>
+
+<div>
+    <button mat-raised-button color="primary" (click)="onSaveCar()"
+        [disabled]="f.invalid && disableSaveBtn">Submit</button>
+    <button mat-raised-button color="primary" mat-dialog-close style="margin-left: 10px;">Cancel</button>
+</div>

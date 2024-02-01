@@ -1,0 +1,127 @@
+
+<!-- <table class="table" >
+
+    <thead>
+        <tr>
+            <th>Order Id</th>
+            <th>CustomerId</th>
+            <th>CarId</th>
+            <th>WasherId</th>
+            <th>Plan Id</th>
+            <th>promocodeId</th>
+            <th>totalPrice</th>
+            <th>orderStatus</th>
+            <th>beforeWashPic</th>
+            <th>afterWashPic</th>
+            <th>placedOn</th>
+            <th>scheduledOn</th>
+            <th>closedOn</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let o of orders">
+            <td><a [routerLink]="['/order',o.orderId]" >{{o.orderId}}</a></td>
+            <td>{{o.customerId}}</td>
+            <td>{{o.carId}}</td>
+            <td>{{o.washerId}}</td>
+            <td>{{o.planId}}</td>
+            <td>{{o.promocodeId}}</td>
+            <td>{{o.totalPrice}}</td>
+            <td>{{o.orderStatus}}</td>
+            <td>{{o.beforeWashPic}}</td>
+            <td>{{o.afterWashPic}}</td>
+            <td>{{o.placedOn}}</td>
+            <td>{{o.scheduledOn}}</td>
+            <td>{{o.closedOn}}</td>
+        </tr>
+    </tbody>
+</table> -->
+<!-- <div class="d-block flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 150px;">
+   
+    <ul class="nav nav-pills flex-column mb-auto">
+      
+      <li>
+        <a routerLink="/place-order" *ngIf="this.authenticationResponse.userRole=='customer'" routerLinkActive="active" class="nav-link text-white shift">
+          Place Order
+        </a>
+      </li>
+      <li *ngIf="this.authenticationResponse.userRole!='admin'">
+        <a (click)=" getUserOrders()"  routerLinkActive="active" class="nav-link text-white shift">
+          My Orders
+        </a>
+      </li>
+      
+      <li *ngIf="this.authenticationResponse.userRole!='customer'">
+        <a (click)="getAllOpenOrders()" routerLinkActive="active" class="nav-link text-white shift">
+         All Open Orders
+        </a>
+      </li>
+      <li *ngIf="this.authenticationResponse.userRole=='admin'">
+        <a (click)="getAllOrders()" routerLinkActive="active" class="nav-link text-white shift">
+         All Orders
+        </a>
+      </li>
+      
+    </ul>
+    
+  </div> -->
+  <div class="btn-group py-3" role="group" aria-label="Basic example">
+    <button type="button" (click)=" getAcceptedOrders()" class="btn btn-light">Pending Orders</button>
+    <button type="button" (click)=" getUserOrders()" class="btn btn-light">My Orders</button>
+    <button type="button" *ngIf="this.authenticationResponse.userRole!='customer'" (click)="getAllOpenOrders()" class="btn btn-light">Show Open Orders</button>
+    <button type="button" *ngIf="this.authenticationResponse.userRole=='admin'" (click)="getAllOrders()" class="btn btn-light">Show All Orders</button>
+  </div>
+
+  <div *ngIf="show">
+
+  </div>
+<div *ngIf="orders!=null">
+  <table class="table" >
+
+    <thead>
+        <tr>
+            <th>Order Id</th>
+            <th>CustomerId</th>
+            <th>CarId</th>
+            <th>WasherId</th>
+            <th>Plan Id</th>
+            <th>promocode</th>
+            <th>totalPrice</th>
+            <th>orderStatus</th>
+            <!-- <th>beforeWashPic</th>
+            <th>afterWashPic</th> -->
+            <th>placedOn</th>
+            <!-- <th>scheduledOn</th>
+            <th>closedOn</th> -->
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let o of orders">
+            <td><a [routerLink]="['/order',o.orderId]" >{{o.orderId}}</a></td>
+            <td>{{o.customerId}}</td>
+            <td>{{o.carId}}</td>
+            <td>{{o.washerId}}</td>
+            <td>{{o.planId}}</td>
+            <td>{{o.promocode}}</td>
+            <td>{{o.totalPrice}}</td>
+            <td>{{o.orderStatus}}</td>
+            <!-- <td>{{o.beforeWashPic}}</td>
+            <td>{{o.afterWashPic}}</td> -->
+            <td>{{o.placedOn}}</td>
+            <!-- <td>{{o.scheduledOn}}</td>
+            <td>{{o.closedOn}}</td> -->
+            <td *ngIf="o.orderStatus=='scheduled'&&this.authenticationResponse.userRole=='washer'"> <button class="btn btn-info" (click)="completeOrder(o)">Complete</button></td>
+            <td *ngIf="o.orderStatus=='open'&&this.authenticationResponse.userRole=='washer'"> <button class="btn btn-info" (click)="acceptOrder(o)">Accept</button></td>
+            <td *ngIf="this.authenticationResponse.userRole=='admin'"> <button class="btn btn-info" (click)="deleteOrder(o)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+  
+
+
+        
+
+        

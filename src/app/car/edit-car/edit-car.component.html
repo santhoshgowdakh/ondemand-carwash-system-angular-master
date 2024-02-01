@@ -1,0 +1,69 @@
+<h5>Edit Car</h5>
+<form class="flex-container" #f="ngForm" novalidate autocomplete="off">
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="number" placeholder="Car Id" [(ngModel)]="data.carId" required #fname="ngModel"
+                name="carname">
+        </mat-form-field>
+
+    </div>
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="number" placeholder="User Id" [(ngModel)]="data.userId" required #fname="ngModel"
+                name="uername">
+        </mat-form-field>
+
+    </div>
+
+
+
+    <!-- <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="String" placeholder="Image" [(ngModel)]="data.carImage" required #fname="ngModel"
+                name="image">
+        </mat-form-field>
+
+    </div> -->
+
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="text" placeholder="Registeration Number" [(ngModel)]="data.carRegistrationNumber"
+                required #fname="ngModel" name="registration">
+        </mat-form-field>
+
+    </div>
+    <!-- <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="String" placeholder="Car Location" [(ngModel)]="data.carLocation" required
+                #fname="ngModel" name="location">
+        </mat-form-field>
+
+    </div> -->
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="String" placeholder="Car Color" [(ngModel)]="data.carColor" required #fname="ngModel"
+                name="color">
+        </mat-form-field>
+
+    </div>
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="String" placeholder="Car Brand" [(ngModel)]="data.carBrand" required #fname="ngModel"
+                name="brand">
+        </mat-form-field>
+
+    </div>
+    <div class="col-sm-3">
+        <mat-form-field class="example-form-field">
+            <input matInput type="String" placeholder="Car Model" [(ngModel)]="data.carModel" required #fname="ngModel"
+                name="model">
+        </mat-form-field>
+
+    </div>
+</form>
+
+<div>
+    <button mat-raised-button color="primary" (click)="onSaveEditedData()">Submit</button>
+</div>

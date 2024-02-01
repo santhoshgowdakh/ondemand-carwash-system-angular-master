@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+}
+
+.example-button-row {
+    display: table-cell;
+    width: 490px;
+}
+
+.add_user {
+    float: right;
+    margin: 5px;
+}
